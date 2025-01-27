@@ -262,6 +262,7 @@
                   pkgs.go
                   pkgs.perl
                 ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
+                  pkgs.darwin.cctools
                   # Required by the git2 crate, see https://github.com/rust-lang/git2-rs/blob/master/libgit2-sys/build.rs#L251
                   pkgs.darwin.apple_sdk.frameworks.Security
                   pkgs.darwin.apple_sdk.frameworks.CoreFoundation
